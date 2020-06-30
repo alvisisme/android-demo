@@ -15,6 +15,7 @@ script:
 deploy:
   provider: releases
   token: $GITHUB_TOKEN
+  file_glob: true
   file: "/home/travis/build/alvisisme/android-demo/app/build/outputs/apk/*/*.apk"
   cleanup: true
   on:
