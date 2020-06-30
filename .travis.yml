@@ -10,3 +10,5 @@ android:
     - extra-android-m2repository
 before_install:
   - chmod a+x gradlew
+script:
+  - ./gradlew build
