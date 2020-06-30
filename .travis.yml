@@ -8,3 +8,5 @@ android:
     - android-29
     - extra-google-m2repository
     - extra-android-m2repository
+before_install:
+  - chmod a+x gradlew
