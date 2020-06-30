@@ -12,3 +12,14 @@ before_install:
   - chmod a+x gradlew
 script:
   - ./gradlew build
+deploy:
+  provider: releases
+  api_key:
+    secure: $GITHUB_TOKEN
+    file_glob: true
+  file: "/home/travis/build/alvisisme/android-demo/app/build/outputs/apk/*/*.apk"
+  skip_cleanup: true
+  on:
+    repo: alvisisme/android-demo
+    all_branches: true
+    tags: true
